@@ -12,7 +12,7 @@ def create_person_list(people: list) -> list:
     result = []
 
     for human in people:
-        result.append(Person(human["name"], human["age"]))
+        result.append(Person(human.get("name"), human.get("age")))
 
     for human in people:
         human_ = Person.people.get(human["name"])
